@@ -5,5 +5,5 @@ import LoginScreen from '../src/components/LoginScreen'
 
 storiesOf('LoginScreen', module)
   .add('default', () => (
-    <LoginScreen/>
+    <LoginScreen onGoogleLogin={action('onGoogleLogin')}/>
   ))

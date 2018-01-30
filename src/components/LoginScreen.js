@@ -15,13 +15,16 @@ const FullHeightGrid = styled(Grid)`
 `
 
 export default class LoginScreen extends Component {
+  static defaultProps = {
+    onGoogleLogin: () => {}
+  }
   render() {
     return (
       <FullHeightGrid centered verticalAlign="middle">
         <Grid.Column style={{width: '280px'}}>
           <Segment stacked textAlign="center" padded = "very">
             <Header as='h1'>로그인</Header>
-            <Button color='google plus' fluid>
+            <Button color='google plus' fluid onClick={this.props.onGoogleLogin}>
               <Icon name='google plus' /> 구글로 로그인
             </Button>
             <Button color='twitter' fluid style={{marginTop: '10px'}}>

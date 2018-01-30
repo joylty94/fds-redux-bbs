@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Route,
+} from 'react-router-dom'
 
-class App extends Component {
+import LoginScreenContainer from './containers/LoginScreenContainer'
+
+class App extends Component { // router 설정
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <BrowserRouter>
+        <div>
+          <Route path="/login" component={LoginScreenContainer} />
+        </div>
+      </BrowserRouter>
+    )
   }
 }
 

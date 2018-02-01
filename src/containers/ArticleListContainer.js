@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 
 import ArticleList from '../components/ArticleList';
 import { fetchArticleList } from '../ducks/articleList';
+import withLoading from '../hocs/withLogin';
 
 export default connect(
   // mapStateToProps
@@ -14,4 +15,4 @@ export default connect(
       dispatch(fetchArticleList());
     },
   }),
-)(ArticleList);
+)(withLoading(ArticleList));

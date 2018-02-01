@@ -11,7 +11,7 @@ export default function withAuth(WrappedComponent) { // 고차 컴포넌트를 �
       redirectToLogin: false,
     }
     componentWillMount() { // component가 마운트 되기 직전에 실행된다.
-      const currentUser=firebase.auth().currentUser;
+      const { currentUser } = firebase.auth();
       if (currentUser) { // 사용자가 있을 때.
         this.setState({
           currentUser,
@@ -48,9 +48,8 @@ export default function withAuth(WrappedComponent) { // 고차 컴포넌트를 �
         );
       }
       return (
-          <WrappedComponent {...this.props} /> // 실제 Main을 render하는 곳.
+        <WrappedComponent {...this.props} /> // 실제 Main을 render하는 곳.
       ); // hocs를 사용할 때 hocs의 모든 props를 Main에게 반환 하도록 해야된다.
-
     }
   };
 }

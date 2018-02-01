@@ -23,6 +23,5 @@ export default class LoginScreenContainer extends Component {
     return (
       <LoginScreen onGoogleLogin={this.handleGoogleLogin} />
     );
-
   }
 }

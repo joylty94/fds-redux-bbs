@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter,
+  HashRouter,
   Route,
   Redirect,
 } from 'react-router-dom';
@@ -26,13 +26,13 @@ class App extends Component { // router 설정
   render() {
     return (
       <Provider store={store} >
-        <BrowserRouter>
+        <HashRouter>
           <div>
             <Route path="/" exact component={Home} />
             <Route path="/login" component={LoginScreenContainer} />
             <Route path="/list" component={ListPage} />
           </div>
-        </BrowserRouter>
+        </HashRouter>
       </Provider>
     );
   }

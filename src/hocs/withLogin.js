@@ -13,7 +13,7 @@ export default function withLoading(WrappedComponent) {
         );
       }
       return (
-        <WrappedComponent />
+        <WrappedComponent {...this.props} />
       );
     }
   };

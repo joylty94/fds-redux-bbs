@@ -1,7 +1,7 @@
 import React from 'react';
 import TopMenuContainer from './TopMenuContainer';
-import withAuth from '../hocs/withAuth'
-;
+import withAuth from '../hocs/withAuth';
+
 const ListPage = () => (
   <div>
     <TopMenuContainer />

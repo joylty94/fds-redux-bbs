@@ -11,7 +11,7 @@ export default function withAuth(WrappedComponent) { // 고차 컴포넌트를 �
       redirectToLogin: false,
     }
     componentWillMount() { // component가 마운트 되기 직전에 실행된다.
-      const currentUser = firebase.auth().currentUser;
+      const currentUser=firebase.auth().currentUser;
       if (currentUser) { // 사용자가 있을 때.
         this.setState({
           currentUser,

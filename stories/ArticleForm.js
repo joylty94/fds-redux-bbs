@@ -9,4 +9,7 @@ storiesOf('ArticleForm', module)
   ))
   .add('error message', () => (
     <ArticleForm errorMessage="필드를 모두 채워야 합니다." />
+  ))
+  .add('creating', () => (
+    <ArticleForm creating />
   ));

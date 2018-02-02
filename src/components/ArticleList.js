@@ -7,10 +7,6 @@ export default class ArticleList extends Component {
     onMount: () => {},
   }
 
-  componentDidMount() {
-    this.props.onMount();
-  }
-
   render() {
     const { articles } = this.props;
     return (

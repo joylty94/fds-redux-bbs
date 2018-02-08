@@ -1,0 +1,47 @@
+[debug] [2018-02-08T03:33:30.629Z] ----------------------------------------------------------------------
+[debug] [2018-02-08T03:33:30.631Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\bin\firebase serve --only functions
+[debug] [2018-02-08T03:33:30.632Z] CLI Version:   3.17.4
+[debug] [2018-02-08T03:33:30.632Z] Platform:      win32
+[debug] [2018-02-08T03:33:30.632Z] Node Version:  v6.11.2
+[debug] [2018-02-08T03:33:30.633Z] Time:          Thu Feb 08 2018 12:33:30 GMT+0900 (대한민국 표준시)
+[debug] [2018-02-08T03:33:30.633Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-08T03:33:30.646Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-08T03:33:30.647Z] > authorizing via signed-in user
+[debug] [2018-02-08T03:33:30.649Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fds-redux-bbs-cf3e2  
+  
+ Thu Feb 08 2018 12:33:30 GMT+0900 (대한민국 표준시)
+[debug] [2018-02-08T03:33:31.677Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-08T03:33:31.679Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/fds-redux-bbs-cf3e2/tokens  
+  
+ Thu Feb 08 2018 12:33:31 GMT+0900 (대한민국 표준시)
+[debug] [2018-02-08T03:33:32.523Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\LTY\Documents\fds-redux-bbs'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-02-08T03:33:32.987Z] Fetching environment
+[debug] [2018-02-08T03:33:32.989Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/fds-redux-bbs-cf3e2  
+  
+ Thu Feb 08 2018 12:33:32 GMT+0900 (대한민국 표준시)
+[debug] [2018-02-08T03:33:32.989Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/fds-redux-bbs-cf3e2/apiKeys  
+  
+ Thu Feb 08 2018 12:33:32 GMT+0900 (대한민국 표준시)
+[debug] [2018-02-08T03:33:33.999Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-08T03:33:34.225Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-08T03:33:34.226Z] Starting @google-cloud/functions-emulator
+[debug] [2018-02-08T03:33:36.275Z] Parsing function triggers
+[warn] !  functions: Failed to load functions source code. Ensure that you have the latest SDK by running npm i --save firebase-functions inside the functions directory.
+[warn] !  functions: Error from emulator. FirebaseError: Error occurred while parsing your function triggers.
+
+TypeError: Cannot read property 'token' of undefined
+    at Object.<anonymous> (C:\Users\LTY\Documents\fds-redux-bbs\functions\index.js:14:42)
+    at Module._compile (module.js:570:32)
+    at Object.Module._extensions..js (module.js:579:10)
+    at Module.load (module.js:487:32)
+    at tryModuleLoad (module.js:446:12)
+    at Function.Module._load (module.js:438:3)
+    at Module.require (module.js:497:17)
+    at require (internal/module.js:20:19)
+    at C:\Users\LTY\AppData\Roaming\nvm\v6.11.2\node_modules\firebase-tools\lib\triggerParser.js:18:11
+    at Object.<anonymous> (C:\Users\LTY\AppData\Roaming\nvm\v6.11.2\node_modules\firebase-tools\lib\triggerParser.js:38:3)

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import ArticleList from '../components/ArticleList';
 import { fetchArticleList } from '../ducks/articleList';
-import withLoading from '../hocs/withLogin';
+import withLoading from '../hocs/withLoading';
 
 const ArticleListWithLoading = withLoading(ArticleList);
 
